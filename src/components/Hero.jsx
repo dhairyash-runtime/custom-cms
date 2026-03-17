@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
     return (
-        <div className="w-full font-['Poppins'] bg-white flex flex-col items-center justify-center pt-16 pb-12 px-6 md:pt-32 md:pb-24">
+        <div id="home" className="w-full font-['Poppins'] bg-white flex flex-col items-center justify-center pt-16 pb-12 px-6 md:pt-32 md:pb-24">
             <style>{`
                 @keyframes fadeInUp {
                     from { opacity: 0; transform: translateY(20px); }
@@ -38,14 +38,25 @@ const Hero = () => {
                 <button
                     className="flex items-center cursor-pointer justify-center gap-2 text-white bg-[#218CA1] hover:text-black hover:bg-[#DEDB00] px-6 py-3 md:px-10 md:py-4 rounded-full font-semibold transition-all hover:scale-105 shadow-sm text-[16px] md:text-[18px] whitespace-nowrap"
                 >
-                    Request CMS Proposal
+                    <a
+                        href="https://www.runtime-solutions.com/contact/"
+                    >Request CMS Proposal</a>
                     <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                 </button>
 
-                <button className="text-[#a4a200] cursor-pointer bg-white border border-[#DEDB00] px-6 py-3 md:px-12 md:py-4 rounded-full font-semibold hover:bg-[#fcfae3] transition-colors text-[16px] md:text-[18px] whitespace-nowrap">
-                    Know more
+                <button
+                    onClick={() => {
+                        const el = document.getElementById('features');
+                        if (el) {
+                            const top = el.getBoundingClientRect().top + window.scrollY - 70;
+                            window.scrollTo({ top, behavior: 'smooth' });
+                        }
+                    }}
+                    className="text-[#a4a200] cursor-pointer bg-white border border-[#DEDB00] px-6 py-3 md:px-12 md:py-4 rounded-full font-semibold hover:bg-[#fcfae3] transition-colors text-[16px] md:text-[18px] whitespace-nowrap"
+                >
+                    Know More
                 </button>
             </div>
 

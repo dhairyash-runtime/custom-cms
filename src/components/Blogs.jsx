@@ -10,24 +10,24 @@ const BLOGS = [
         title: 'Why Enterprises Need a Custom CMS Over WordPress',
         description:
             'Discover why leading enterprises are moving beyond WordPress and generic CMS platforms to fully custom-built content management systems...',
-        image: '/blog1.jpg',
-        link: '#',
+        image: '/blog1.png',
+        link: '/blog/blog-1',
     },
     {
         id: 'blog-2',
         title: 'Building Workflow-Driven Content Platforms for News Portals',
         description:
             'How custom editorial workflows, role-based access, and real-time publishing pipelines are transforming modern news portals...',
-        image: '/blog2.jpg',
-        link: '#',
+        image: '/blog2.png',
+        link: '/blog/blog-2',
     },
     {
         id: 'blog-3',
         title: 'API-First CMS: Powering Multi-Channel Content Delivery',
         description:
             'Learn how API-first CMS architecture enables seamless content delivery across websites, mobile apps, and IoT devices...',
-        image: '/blog3.jpg',
-        link: '#',
+        image: '/blog3.png',
+        link: '/blog/blog-3',
     },
 ];
 
@@ -75,7 +75,7 @@ const Blogs = () => {
     }, []);
 
     return (
-        <section className="relative w-full font-['Poppins'] bg-white"
+        <section id="blogs" className="relative w-full font-['Poppins'] bg-white"
             style={{ paddingTop: '70px', paddingBottom: '80px' }}>
 
             {/* ── "Blogs & Articles" pill label ── */}
@@ -100,8 +100,6 @@ const Blogs = () => {
                         <a
                             key={id}
                             href={link}
-                            target="_blank"
-                            rel="noopener noreferrer"
                             ref={(el) => (cardRefs.current[i] = el)}
                             onMouseEnter={() => setIsHovered(true)}
                             onMouseLeave={() => setIsHovered(false)}

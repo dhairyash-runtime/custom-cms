@@ -260,7 +260,7 @@ const LARGE_CARDS = [
         description:
             'Every CMS we build is tailored to your unique business workflow — from content creation and editorial review to publishing and archiving.',
         // Lottie animation — replaces the SVG illustration for this card
-        lottieUrl: 'https://lottie.host/5c4f72d9-9a96-444e-b4d1-b6437989d5d1/QsUrKeZaFc.lottie',
+        lottieUrl: 'https://lottie.host/a4bc684c-bf70-41e8-b72c-eba61db94c88/bJbzYF3JU5.lottie',
         Illustration: IllustrationLifecycle, // fallback
     },
     {
@@ -268,7 +268,7 @@ const LARGE_CARDS = [
         title: 'Modular Architecture',
         description:
             'Built with a modular, component-based approach — enabling easy feature additions, independent updates, and seamless scaling as your content grows.',
-        lottieUrl: 'https://lottie.host/a4bc684c-bf70-41e8-b72c-eba61db94c88/bJbzYF3JU5.lottie',
+        lottieUrl: 'https://lottie.host/5c4f72d9-9a96-444e-b4d1-b6437989d5d1/QsUrKeZaFc.lottie',
         Illustration: IllustrationCloud, // fallback
     },
 ];
@@ -279,14 +279,14 @@ const SMALL_CARDS = [
         title: 'Role-Based Permissions',
         description:
             'Granular access control with custom roles for admins, editors, contributors, and reviewers — ensuring content governance at every level.',
-        Illustration: IllustrationScale,
+        Illustration: IllustrationSecure,
     },
     {
         id: 'scalable',
         title: 'Fully Scalable',
         description:
             'Cloud-native infrastructure designed to handle growing content volumes, high traffic, and multi-site deployments without performance degradation.',
-        Illustration: IllustrationSecure,
+        Illustration: IllustrationScale,
     },
     {
         id: 'developer-friendly',
@@ -334,7 +334,7 @@ const Benefits = () => {
     };
 
     return (
-        <section className="relative w-full overflow-hidden font-['Poppins']">
+        <section id="benefits" className="relative w-full overflow-hidden font-['Poppins']">
 
             {/* ── striped orange background ── */}
             <StripedBg />
